@@ -1,0 +1,63 @@
+{% extends 'base.html' %} 
+{% block content %}
+<div class="text-center">{{ result }}</div> 
+<form action="{% url 'cardsave' %}" method="POST">
+    {% csrf_token %}
+<div class="w-full h-auto overflow-scroll block h-screen bg-gradient-to-r from-blue-100 via-purple-100 to-pink-100 p-4 flex items-center justify-center" >
+    <div class="bg-white py-6 px-10 sm:max-w-md w-full ">
+        <div class="sm:text-3xl text-2xl font-semibold text-center text-sky-600  my-12 pt-1">
+            Registration Card
+        </div>
+        <div class="">
+            <div>
+                 <input name="number" type="text" class="focus:outline-none border-b w-full pb-2 border-sky-400 placeholder-gray-500"  placeholder="カードナンバー"/>
+            </div>
+             <div>
+                 <input name="name" type="text" class="focus:outline-none border-b w-full pb-2 border-sky-400 placeholder-gray-500 my-8"  placeholder="カード名称"/>
+            </div>
+             <div>
+            <input name="atk" type="text" class="focus:outline-none border-b w-full pb-2 border-sky-400 placeholder-gray-500 mb-8"  placeholder="ATK"/>
+            </div>
+             <div>
+            <input name="hp" type="number" class="focus:outline-none border-b w-full pb-2 border-sky-400 placeholder-gray-500 mb-8"  placeholder="HP"/>
+            </div>
+            <div class="">
+                <input name="stk" type="number" class="focus:outline-none border-b w-full pb-2 border-sky-400 placeholder-gray-500 mb-8"  placeholder="STK" />
+            </div>
+            <div class="">
+                <textarea name="text" id="" class="focus:outline-none border-b w-full pb-2 border-sky-400 placeholder-gray-500 mb-8"  placeholder="テキスト"></textarea>
+            </div>
+            <div class="">
+                <input name="level_limit" type="number" class="focus:outline-none border-b w-full pb-2 border-sky-400 placeholder-gray-500 mb-8"  placeholder="デッキレベル上限" />
+            </div>
+            <div class="">
+                <input name="cnt_limit" type="number" class="focus:outline-none border-b w-full pb-2 border-sky-400 placeholder-gray-500 mb-8"  placeholder="CNT上限" />
+            </div>
+            <div class="">
+                <input name="party_num" type="number" class="focus:outline-none border-b w-full pb-2 border-sky-400 placeholder-gray-500 mb-8"  placeholder="所属軍" />
+            </div>
+            <div class="">
+                <input name="number_sheet_limit" type="number" class="focus:outline-none border-b w-full pb-2 border-sky-400 placeholder-gray-500 mb-8"  placeholder="枚数制限" />
+            </div>
+            <!-- <div class="flex">
+                <input type="checkbox" class="border-sky-400 " value="" />
+                <div class="px-3 text-gray-500">
+                    I accept terms & conditions 
+                </div>
+            </div> -->
+            <div class="flex justify-center my-6">
+                <button class=" rounded-full  p-3 w-full sm:w-56   bg-gradient-to-r from-sky-600  to-teal-300 text-white text-lg font-semibold " >
+                    Create Card info
+                </button>
+            </div>
+            <div class="flex justify-center ">
+                <p class="text-gray-500">Do you have an acount? </p>
+                <a href="" style="pointer-events: none" class="text-sky-600 pl-2"> Sign Up</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+</form>
+ {% endblock %}
