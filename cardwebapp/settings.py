@@ -75,10 +75,26 @@ DATABASES = {
         'NAME': 'card_database',
         'USER': 'card',
         'PASSWORD': '?card88!?',
-        'HOST': 'localhost',
+        'HOST': '162.43.6.92',
         'PORT': '5432',
     }
 }
+
+X_FRAME_OPTIONS = 'SAMEORIGIN'
+
+
+
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql_psycopg2',
+#         'NAME': 'card_database',
+#         'USER': 'card',
+#         'PASSWORD': '?card88!?',
+#         'HOST': 'localhost',
+#         'PORT': '5432',
+#     }
+# }
+
 
 
 

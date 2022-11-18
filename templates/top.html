@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% block sidebar %}
+
+{% endblock %}
+{% block content %}
+{% load static %}
+<video class="w-full absolute" src="{% static 'top.mp4' %}" autoplay muted></video>
+<a href="{% url 'deck' %}" class="w-full h-40 absolute z-30  inset-y-2/4 mt-20"></a>
+
+{% endblock %}
